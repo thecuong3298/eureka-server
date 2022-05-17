@@ -15,6 +15,10 @@
     <description>eureka-server</description>
     <properties>
         <java.version>11</java.version>
+        <sonar.projectKey>EUREKA</sonar.projectKey>
+        <sonar.host.url>https://sonar.vissoft.vn</sonar.host.url>
+        <sonar.login>56a4773ab8d03325fbd5707bcd936b7facc6b6bf</sonar.login>
+        <sonar.exclusions>pom.xml</sonar.exclusions>
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
     </properties>
     <dependencies>
@@ -45,13 +49,22 @@
         </dependencies>
     </dependencyManagement>
 
+
+
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
+
+
 
 </project>
