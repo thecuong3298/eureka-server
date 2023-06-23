@@ -4,6 +4,8 @@ on: [workflow_dispatch, push, pull_request, issues, deployment_status]
 
 jobs:
   context-variables:
-    uses: thecuong3298/api-gateway/.github/workflows/maven.yml@master
-    with:
-      SERVICE_NAME: "hehe"
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "GITHUB_REPOSITORY: $GITHUB_HEAD_REF"
+          echo "github.repository: ${{ github.repository }}"
