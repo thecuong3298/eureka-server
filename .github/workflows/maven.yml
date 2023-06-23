@@ -6,7 +6,9 @@ jobs:
   context-variables:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "GITHUB_REPOSITORY: ${{ github.ref_name }}"
-          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
-          echo "github.repository: ${{ github.repository }}"
+      - id: string
+        uses: ASzc/change-string-case-action@v5
+        with:
+          string: $GITHUB_REPOSITORY
+      - id: step2
+        run: echo ${{ steps.string.outputs.lowercase }}
