@@ -8,4 +8,5 @@ jobs:
     steps:
       - run: |
           echo "GITHUB_REPOSITORY: $GITHUB_HEAD_REF"
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
           echo "github.repository: ${{ github.repository }}"
