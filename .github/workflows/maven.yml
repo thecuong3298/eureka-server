@@ -4,8 +4,6 @@ on: [workflow_dispatch, push, pull_request, issues, deployment_status]
 
 jobs:
   context-variables:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: thecuong3298/api-gateway/.github/workflows/maven.yml@master
-        with:
-          SERVICE_NAME: "hehe"
+    uses: thecuong3298/api-gateway/.github/workflows/maven.yml@master
+    with:
+      SERVICE_NAME: "hehe"
