@@ -6,6 +6,6 @@ jobs:
   context-variables:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
-          echo "github.repository: ${{ github.repository }}"
+      - uses: thecuong3298/api-gateway/.github/workflows/maven.yml@master
+        with:
+          SERVICE_NAME: "hehe"
